@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta -->
+  <title>ASR DIGITALBOOST AND MUSIC PRIVATE LIMITED | Digital Marketing &amp; Creative Solutions</title>
+  <meta name="description" content="ASR DIGITALBOOST AND MUSIC PRIVATE LIMITED delivers digital marketing, branding, social media marketing, SEO, advertising, creative design, video production, web development and digital growth solutions." />
+  <meta name="keywords" content="digital marketing, branding, social media, SEO, Google Ads, video production, web development, influencer marketing, creative design, AI automation, ASR DigitalBoost" />
+  <meta name="author" content="ASR DIGITALBOOST AND MUSIC PRIVATE LIMITED" />
+  <link rel="canonical" href="https://www.asrdigitalboost.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.asrdigitalboost.com/" />
+  <meta property="og:title" content="ASR DIGITALBOOST AND MUSIC PRIVATE LIMITED | Digital Marketing &amp; Creative Solutions" />
+  <meta property="og:description" content="Full-service digital marketing, branding, social media marketing, SEO, advertising, creative design, video production and AI-powered growth solutions." />
+  <meta property="og:image" content="https://www.asrdigitalboost.com/assets/og-image.jpg" />
+  <meta property="og:site_name" content="ASR DIGITALBOOST AND MUSIC PRIVATE LIMITED" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@ASRDigitalBoost" />
+  <meta name="twitter:title" content="ASR DIGITALBOOST AND MUSIC PRIVATE LIMITED" />
+  <meta name="twitter:description" content="Where Creativity Meets Digital Growth." />
+  <meta name="twitter:image" content="https://www.asrdigitalboost.com/assets/og-image.jpg" />
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ASR DIGITALBOOST AND MUSIC PRIVATE LIMITED",
+    "alternateName": "ASR DigitalBoost",
+    "url": "https://www.asrdigitalboost.com",
+    "logo": "https://www.asrdigitalboost.com/assets/logo.png",
+    "description": "Full-service digital marketing, branding, social media marketing, SEO, advertising, creative design, video production and AI-powered digital growth solutions.",
+    "foundingDate": "2024",
+    "founders": [{"@type": "Person", "name": "Rahul Ali"}],
+    "sameAs": [
+      "https://www.instagram.com/asrdigitalboost",
+      "https://www.facebook.com/asrdigitalboost",
+      "https://www.linkedin.com/company/asrdigitalboost",
+      "https://www.youtube.com/@asrdigitalboost"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "email": "hello@asrdigitalboost.com"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&family=Sora:wght@100;200;300;400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js" defer></script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CUSTOM CURSOR
+  ═══════════════════════════════════════════════════════════ -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true">
+    <span class="cursor-label" id="cursorLabel"></span>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       LOADING SCREEN
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="loadingScreen" class="loading-screen" role="status" aria-label="Loading ASR DigitalBoost">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <span class="load-asr">ASR</span>
+        <span class="load-db">DIGITALBOOST</span>
+      </div>
+      <div class="loading-bar-wrap">
+        <div class="loading-bar" id="loadingBar"></div>
+      </div>
+      <div class="loading-pct" id="loadingPct">00</div>
+    </div>
+    <div class="loading-grid" aria-hidden="true"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CINEMATIC INTRO
+  ═══════════════════════════════════════════════════════════ -->
+  <div id="introScreen" class="intro-screen" role="presentation" aria-hidden="true">
+    <canvas id="introCanvas"></canvas>
+
+    <button class="skip-btn" id="skipBtn" aria-label="Skip intro">SKIP</button>
+
+    <div class="intro-greetings" id="introGreetings">
+      <span class="greeting-text" id="greetingText"></span>
+    </div>
+
+    <div class="intro-logo" id="introLogo">
+      <svg class="logo-svg" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg" aria-label="ASR DigitalBoost logo">
+        <text class="logo-path-text" x="50%" y="70" text-anchor="middle">ASR</text>
+      </svg>
+      <div class="intro-company-name">
+        <div class="intro-company-line1">ASR DIGITALBOOST</div>
+        <div class="intro-company-line2">AND MUSIC PRIVATE LIMITED</div>
+        <div class="intro-tagline">Where Creativity Meets Digital Growth.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════════ -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <nav class="nav-container" role="navigation" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" aria-label="ASR DigitalBoost home">
+        <span class="logo-asr">ASR</span>
+        <span class="logo-db">DIGITALBOOST</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#contact" class="nav-link nav-link--cta" data-cursor="OPEN">Start a Project</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+      <ul class="mobile-nav-links" role="list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#work" class="mobile-nav-link">Work</a></li>
+        <li><a href="#process" class="mobile-nav-link">Process</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- ═══════════════════════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="hero" class="hero-section" aria-labelledby="heroHeading">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+      <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <div class="hero-text">
+          <div class="hero-eyebrow" aria-hidden="true">
+            <span class="eyebrow-line"></span>
+            <span class="eyebrow-label">FULL-SERVICE DIGITAL AGENCY</span>
+          </div>
+
+          <h1 id="heroHeading" class="hero-h1">
+            <span class="hero-line">WE BUILD</span>
+            <span class="hero-line hero-line--accent">DIGITAL BRANDS</span>
+            <span class="hero-line">THAT GET</span>
+            <div class="hero-rotating-wrap">
+              <span class="hero-rotating" id="heroRotating">NOTICED.</span>
+            </div>
+          </h1>
+
+          <p class="hero-subtext">
+            Full-service digital marketing, branding, advertising and creative solutions
+            designed to turn attention into measurable growth.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn--primary" data-cursor="OPEN" aria-label="Start a project with ASR DigitalBoost">
+              <span>START A PROJECT</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a href="#work" class="btn btn--ghost" data-cursor="OPEN" aria-label="Explore our work">
+              <span>EXPLORE OUR WORK</span>
+            </a>
+          </div>
+
+          <div class="hero-stats" aria-label="Key statistics">
+            <div class="stat-item">
+              <span class="stat-num" data-target="120">0</span><span class="stat-unit">+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="9">0</span><span class="stat-unit">+</span>
+              <span class="stat-label">Services Offered</span>
+            </div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="360">0</span><span class="stat-unit">°</span>
+              <span class="stat-label">Digital Solutions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <canvas id="heroSphere" aria-hidden="true"></canvas>
+          <div class="hero-visual-hud">
+            <div class="hud-item hud-top-left">AI POWERED</div>
+            <div class="hud-item hud-top-right">360° STRATEGY</div>
+            <div class="hud-item hud-bottom-left">ANALYTICS</div>
+            <div class="hud-item hud-bottom-right">CREATIVE</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         BRAND PHILOSOPHY — CINEMATIC TYPOGRAPHY
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="philosophy-section" aria-labelledby="philosophyHeading">
+      <div class="philosophy-inner">
+        <div class="philosophy-block" id="philosophyBlock">
+          <h2 id="philosophyHeading" class="philosophy-text">
+            <span class="philo-word" data-delay="0">DON'T</span>
+            <span class="philo-word" data-delay="0.1">JUST</span>
+            <span class="philo-word" data-delay="0.2">FOLLOW</span>
+          </h2>
+          <h2 class="philosophy-text philosophy-text--dim">
+            <span class="philo-word" data-delay="0.3">THE</span>
+            <span class="philo-word" data-delay="0.4">DIGITAL</span>
+            <span class="philo-word" data-delay="0.5">WORLD.</span>
+          </h2>
+          <h2 class="philosophy-text philosophy-text--accent">
+            <span class="philo-word" data-delay="0.6">SHAPE</span>
+            <span class="philo-word" data-delay="0.7">IT.</span>
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FOUNDER / ABOUT SECTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="about" class="about-section" aria-labelledby="aboutHeading">
+      <div class="about-bg-grid" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-profile" aria-label="Founder profile">
+            <div class="profile-frame">
+              <div class="profile-img-wrap">
+                <div class="profile-img-placeholder" role="img" aria-label="Rahul Ali - Founder photo placeholder">
+                  <div class="profile-initials">RA</div>
+                </div>
+                <div class="profile-scan-line" aria-hidden="true"></div>
+              </div>
+              <div class="profile-hud" aria-hidden="true">
+                <div class="hud-corner hud-corner--tl"></div>
+                <div class="hud-corner hud-corner--tr"></div>
+                <div class="hud-corner hud-corner--bl"></div>
+                <div class="hud-corner hud-corner--br"></div>
+                <div class="hud-label hud-label--top">IDENTITY VERIFIED</div>
+                <div class="hud-label hud-label--bottom">ASR // FOUNDER PROFILE</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-info">
+            <div class="about-tag reveal-fade">IDENTITY</div>
+            <h2 id="aboutHeading" class="about-name reveal-up">RAHUL ALI</h2>
+
+            <div class="about-meta reveal-fade">
+              <div class="meta-row">
+                <span class="meta-key">ROLE</span>
+                <span class="meta-val">Founder / Digital Strategist</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-key">EXPERTISE</span>
+                <div class="expertise-tags">
+                  <span class="etag">Digital Marketing</span>
+                  <span class="etag">Web Development</span>
+                  <span class="etag">UI/UX</span>
+                  <span class="etag">Graphic Design</span>
+                  <span class="etag">Video Production</span>
+                  <span class="etag">AI &amp; Technology</span>
+                  <span class="etag">Branding</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="about-bio reveal-fade">
+              Building digital experiences where strategy, technology and creativity converge.
+              With a vision to transform how brands communicate in the digital age, ASR DIGITALBOOST
+              was founded to bridge the gap between powerful ideas and impactful execution — creating
+              digital solutions that don't just look great, but drive real, measurable growth.
+            </p>
+
+            <a href="#contact" class="btn btn--primary reveal-fade" data-cursor="OPEN">
+              <span>MEET THE TEAM</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         SERVICES SECTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="services" class="services-section" aria-labelledby="servicesHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-fade">WHAT WE DO</span>
+          <h2 id="servicesHeading" class="section-title reveal-up">
+            EVERYTHING YOUR BRAND<br/>NEEDS TO GROW.
+          </h2>
+          <p class="section-sub reveal-fade">
+            End-to-end digital solutions crafted with strategy, precision and creativity.
+          </p>
+        </div>
+
+        <div class="services-grid" role="list">
+
+          <article class="service-card" role="listitem" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                  <path d="M14 32l6-8 5 6 4-5 5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="34" cy="16" r="3" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="service-num" aria-hidden="true">01</div>
+              <h3 class="service-title">Digital Marketing</h3>
+              <ul class="service-list" aria-label="Digital Marketing services">
+                <li>Digital Strategy</li>
+                <li>Performance Marketing</li>
+                <li>Campaign Management</li>
+                <li>Conversion Optimization</li>
+              </ul>
+              <a href="#contact" class="service-link" aria-label="Explore Digital Marketing services">Explore Service →</a>
+              <div class="service-glow" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="14" width="32" height="20" rx="3" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                  <circle cx="16" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="28" cy="20" r="3" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="36" cy="28" r="3" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M20 24h5M31 20l5 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="service-num" aria-hidden="true">02</div>
+              <h3 class="service-title">Social Media</h3>
+              <ul class="service-list" aria-label="Social Media Marketing services">
+                <li>Instagram Marketing</li>
+                <li>Facebook Marketing</li>
+                <li>LinkedIn Marketing</li>
+                <li>Community Growth</li>
+              </ul>
+              <a href="#contact" class="service-link" aria-label="Explore Social Media services">Explore Service →</a>
+              <div class="service-glow" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                  <path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M18 18l-3-3M30 30l3 3M30 18l3-3M18 30l-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                  <circle cx="24" cy="24" r="3" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="service-num" aria-hidden="true">03</div>
+              <h3 class="service-title">Search Marketing</h3>
+              <ul class="service-list" aria-label="Search Marketing services">
+                <li>SEO &amp; Local SEO</li>
+                <li>Google Ads</li>
+                <li>Search Strategy</li>
+                <li>Analytics</li>
+              </ul>
+              <a href="#contact" class="service-link" aria-label="Explore Search Marketing services">Explore Service →</a>
+              <div class="service-glow" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 10l12 7v14l-12 7-12-7V17z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" opacity="0.4"/>
+                  <path d="M24 10l12 7M24 10l-12 7M24 38V24M36 17l-12 7-12-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="service-num" aria-hidden="true">04</div>
+              <h3 class="service-title">Branding</h3>
+              <ul class="service-list" aria-label="Branding services">
+                <li>Brand Identity</li>
+                <li>Logo Design</li>
+                <li>Brand Strategy</li>
+                <li>Creative Direction</li>
+              </ul>
+              <a href="#contact" class="service-link" aria-label="Explore Branding services">Explore Service →</a>
+              <div class="service-glow" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="10" width="28" height="28" rx="2" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                  <path d="M16 24h16M24 16v16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                  <rect x="18" y="18" width="12" height="12" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                </svg>
+              </div>
+              <div class="service-num" aria-hidden="true">05</div>
+              <h3 class="service-title">Creative Design</h3>
+              <ul class="service-list" aria-label="Creative Design services">
+                <li>Graphic Design</li>
+                <li>Social Media Creatives</li>
+                <li>Thumbnails &amp; Posters</li>
+                <li>UI Design</li>
+              </ul>
+              <a href="#contact" class="service-link" aria-label="Explore Creative Design services">Explore Service →</a>
+              <div class="service-glow" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                  <path d="M20 18l10 6-10 6V18z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="currentColor" opacity="0.7"/>
+                </svg>
+              </div>
+              <div class="service-num" aria-hidden="true">06</div>
+              <h3 class="service-title">Video Production</h3>
+              <ul class="service-list" aria-label="Video Production services">
+                <li>Corporate Videos</li>
+                <li>Advertisements</li>
+                <li>Reels &amp; Music Videos</li>
+                <li>Motion Graphics</li>
+              </ul>
+              <a href="#contact" class="service-link" aria-label="Explore Video Production services">Explore Service →</a>
+              <div class="service-glow" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="24" r="6" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="32" cy="16" r="5" stroke="currentColor" stroke-width="1.5" opacity="0.6"/>
+                  <circle cx="32" cy="32" r="4" stroke="currentColor" stroke-width="1.5" opacity="0.4"/>
+                  <path d="M22 24h4M27 19l2-1M27 29l2 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+                </svg>
+              </div>
+              <div class="service-num" aria-hidden="true">07</div>
+              <h3 class="service-title">Influencer Marketing</h3>
+              <ul class="service-list" aria-label="Influencer Marketing services">
+                <li>Influencer Discovery</li>
+                <li>Campaign Management</li>
+                <li>Creator Partnerships</li>
+                <li>Campaign Analytics</li>
+              </ul>
+              <a href="#contact" class="service-link" aria-label="Explore Influencer Marketing services">Explore Service →</a>
+              <div class="service-glow" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="12" width="32" height="24" rx="3" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+                  <path d="M16 20h16M16 24h10M16 28h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+                  <circle cx="34" cy="28" r="2" fill="currentColor" opacity="0.8"/>
+                </svg>
+              </div>
+              <div class="service-num" aria-hidden="true">08</div>
+              <h3 class="service-title">Web Development</h3>
+              <ul class="service-list" aria-label="Web Development services">
+                <li>Corporate Websites</li>
+                <li>Landing Pages</li>
+                <li>E-commerce</li>
+                <li>UI/UX Design</li>
+              </ul>
+              <a href="#contact" class="service-link" aria-label="Explore Web Development services">Explore Service →</a>
+              <div class="service-glow" aria-hidden="true"></div>
+            </div>
+          </article>
+
+          <article class="service-card" role="listitem" data-tilt>
+            <div class="service-card-inner">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 10c-7.7 0-14 6.3-14 14s6.3 14 14 14 14-6.3 14-14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                  <path d="M32 10l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M20 24h-4M28 24h4M24 20v-4M24 28v4" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.5"/>
+                </svg>
+              </div>
+              <div class="service-num" aria-hidden="true">09</div>
+              <h3 class="service-title">AI &amp; Automation</h3>
+              <ul class="service-list" aria-label="AI and Automation services">
+                <li>AI Solutions</li>
+                <li>Marketing Automation</li>
+                <li>AI Content Workflows</li>
+                <li>Business Automation</li>
+              </ul>
+              <a href="#contact" class="service-link" aria-label="Explore AI and Automation services">Explore Service →</a>
+              <div class="service-glow" aria-hidden="true"></div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         DIGITAL GROWTH VISUALIZATION — SCROLLYTELLING
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="growth-section" aria-labelledby="growthHeading">
+      <div class="growth-sticky">
+        <div class="growth-canvas-wrap">
+          <canvas id="growthCanvas" aria-hidden="true"></canvas>
+        </div>
+        <div class="growth-stage-label" id="growthLabel" aria-live="polite"></div>
+      </div>
+
+      <div class="growth-steps" id="growthSteps">
+        <div class="growth-step" data-stage="ATTENTION" data-desc="Capturing the right eyeballs at the right moment.">
+          <h2 id="growthHeading" class="growth-step-word">ATTENTION</h2>
+        </div>
+        <div class="growth-step" data-stage="ENGAGEMENT" data-desc="Turning impressions into meaningful interactions.">
+          <h2 class="growth-step-word">ENGAGEMENT</h2>
+        </div>
+        <div class="growth-step" data-stage="CONVERSION" data-desc="Converting interest into measurable business outcomes.">
+          <h2 class="growth-step-word">CONVERSION</h2>
+        </div>
+        <div class="growth-step" data-stage="GROWTH" data-desc="Scaling what works. Eliminating what doesn't.">
+          <h2 class="growth-step-word">GROWTH</h2>
+        </div>
+        <div class="growth-step" data-stage="BRAND" data-desc="Building a brand that people choose, remember and trust.">
+          <h2 class="growth-step-word">BRAND</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CAPABILITIES SECTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="capabilities-section" aria-labelledby="capabilitiesHeading">
+      <div class="container">
+        <div class="capabilities-header">
+          <span class="section-tag reveal-fade">OUR APPROACH</span>
+          <h2 id="capabilitiesHeading" class="capabilities-title reveal-up">360° DIGITAL<br/>SOLUTIONS</h2>
+        </div>
+
+        <div class="capabilities-grid" role="list">
+          <div class="cap-item reveal-up" role="listitem" data-delay="0">
+            <div class="cap-num" aria-hidden="true">01</div>
+            <div class="cap-word">STRATEGY</div>
+            <div class="cap-desc">Research-led planning that aligns brand goals with market reality.</div>
+          </div>
+          <div class="cap-item reveal-up" role="listitem" data-delay="0.1">
+            <div class="cap-num" aria-hidden="true">02</div>
+            <div class="cap-word">CREATIVE</div>
+            <div class="cap-desc">Distinctive visual and narrative solutions that differentiate brands.</div>
+          </div>
+          <div class="cap-item reveal-up" role="listitem" data-delay="0.2">
+            <div class="cap-num" aria-hidden="true">03</div>
+            <div class="cap-word">TECHNOLOGY</div>
+            <div class="cap-desc">Modern web, AI and automation infrastructure built for scale.</div>
+          </div>
+          <div class="cap-item reveal-up" role="listitem" data-delay="0.3">
+            <div class="cap-num" aria-hidden="true">04</div>
+            <div class="cap-word">MEDIA</div>
+            <div class="cap-desc">Cross-platform media buying and placement for maximum reach.</div>
+          </div>
+          <div class="cap-item reveal-up" role="listitem" data-delay="0.4">
+            <div class="cap-num" aria-hidden="true">05</div>
+            <div class="cap-word">ANALYTICS</div>
+            <div class="cap-desc">Real-time data intelligence that drives smarter decision-making.</div>
+          </div>
+          <div class="cap-item reveal-up" role="listitem" data-delay="0.5">
+            <div class="cap-num" aria-hidden="true">06</div>
+            <div class="cap-word">GROWTH</div>
+            <div class="cap-desc">Sustainable strategies that compound performance over time.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         WHY ASR DIGITALBOOST
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="why-section" aria-labelledby="whyHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-fade">WHY US</span>
+          <h2 id="whyHeading" class="section-title reveal-up">MORE THAN<br/>MARKETING.</h2>
+          <p class="section-sub reveal-fade">
+            We combine strategy, creativity, technology and data to build digital
+            experiences that move businesses forward.
+          </p>
+        </div>
+
+        <div class="why-grid" role="list">
+          <div class="why-card reveal-fade" role="listitem">
+            <div class="why-num" aria-hidden="true">01</div>
+            <h3 class="why-title">Strategy</h3>
+            <p class="why-desc">Every campaign begins with deep research. We understand your market, audience and objectives before we build anything.</p>
+            <div class="why-border" aria-hidden="true"></div>
+          </div>
+          <div class="why-card reveal-fade" role="listitem">
+            <div class="why-num" aria-hidden="true">02</div>
+            <h3 class="why-title">Creativity</h3>
+            <p class="why-desc">We reject the ordinary. Our creative team brings fresh, bold thinking that makes your brand impossible to ignore.</p>
+            <div class="why-border" aria-hidden="true"></div>
+          </div>
+          <div class="why-card reveal-fade" role="listitem">
+            <div class="why-num" aria-hidden="true">03</div>
+            <h3 class="why-title">Technology</h3>
+            <p class="why-desc">From AI-powered workflows to modern web development, we use cutting-edge technology as a competitive advantage.</p>
+            <div class="why-border" aria-hidden="true"></div>
+          </div>
+          <div class="why-card reveal-fade" role="listitem">
+            <div class="why-num" aria-hidden="true">04</div>
+            <h3 class="why-title">Performance</h3>
+            <p class="why-desc">We measure everything. Every decision is backed by data, and every campaign is optimized for maximum return.</p>
+            <div class="why-border" aria-hidden="true"></div>
+          </div>
+          <div class="why-card reveal-fade" role="listitem">
+            <div class="why-num" aria-hidden="true">05</div>
+            <h3 class="why-title">Data</h3>
+            <p class="why-desc">Analytics isn't an afterthought — it's built into everything we do. Real-time insights drive real-time action.</p>
+            <div class="why-border" aria-hidden="true"></div>
+          </div>
+          <div class="why-card reveal-fade" role="listitem">
+            <div class="why-num" aria-hidden="true">06</div>
+            <h3 class="why-title">Growth</h3>
+            <p class="why-desc">We build for the long term. Our strategies are designed to compound — delivering better results over time.</p>
+            <div class="why-border" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         OUR PROCESS — HORIZONTAL SCROLL
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="process" class="process-section" aria-labelledby="processHeading">
+      <div class="process-sticky">
+        <div class="container">
+          <div class="section-header section-header--left">
+            <span class="section-tag">OUR PROCESS</span>
+            <h2 id="processHeading" class="section-title">HOW WE<br/>BUILD GROWTH.</h2>
+          </div>
+        </div>
+        <div class="process-track-wrap">
+          <div class="process-track" id="processTrack">
+            <div class="process-steps-inner">
+
+              <article class="process-step" aria-label="Step 1: Discover">
+                <div class="process-step-num" aria-hidden="true">01</div>
+                <div class="process-step-connector" aria-hidden="true"></div>
+                <h3 class="process-step-title">DISCOVER</h3>
+                <p class="process-step-desc">Understand the business, audience and objectives. We ask the right questions before we build anything.</p>
+              </article>
+
+              <article class="process-step" aria-label="Step 2: Strategize">
+                <div class="process-step-num" aria-hidden="true">02</div>
+                <div class="process-step-connector" aria-hidden="true"></div>
+                <h3 class="process-step-title">STRATEGIZE</h3>
+                <p class="process-step-desc">Build the digital growth strategy. Data-driven planning that creates a clear path to measurable results.</p>
+              </article>
+
+              <article class="process-step" aria-label="Step 3: Create">
+                <div class="process-step-num" aria-hidden="true">03</div>
+                <div class="process-step-connector" aria-hidden="true"></div>
+                <h3 class="process-step-title">CREATE</h3>
+                <p class="process-step-desc">Design content, campaigns and experiences. Creative output that's both beautiful and strategically sound.</p>
+              </article>
+
+              <article class="process-step" aria-label="Step 4: Launch">
+                <div class="process-step-num" aria-hidden="true">04</div>
+                <div class="process-step-connector" aria-hidden="true"></div>
+                <h3 class="process-step-title">LAUNCH</h3>
+                <p class="process-step-desc">Deploy campaigns across digital channels. Precision timing and targeting for maximum impact.</p>
+              </article>
+
+              <article class="process-step" aria-label="Step 5: Optimize">
+                <div class="process-step-num" aria-hidden="true">05</div>
+                <div class="process-step-connector" aria-hidden="true"></div>
+                <h3 class="process-step-title">OPTIMIZE</h3>
+                <p class="process-step-desc">Analyze performance and continuously improve. We never stop refining until we reach peak performance.</p>
+              </article>
+
+              <article class="process-step" aria-label="Step 6: Scale">
+                <div class="process-step-num" aria-hidden="true">06</div>
+                <div class="process-step-connector" aria-hidden="true"></div>
+                <h3 class="process-step-title">SCALE</h3>
+                <p class="process-step-desc">Scale successful strategies for sustainable growth. What works gets amplified. What doesn't gets replaced.</p>
+              </article>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         PORTFOLIO / WORK SECTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="work" class="work-section" aria-labelledby="workHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-fade">SELECTED WORK</span>
+          <h2 id="workHeading" class="section-title reveal-up">PROJECTS<br/>WE'RE PROUD OF.</h2>
+        </div>
+
+        <div class="work-filters" role="tablist" aria-label="Portfolio filter">
+          <button class="filter-btn filter-btn--active" role="tab" data-filter="all" aria-selected="true">ALL</button>
+          <button class="filter-btn" role="tab" data-filter="branding" aria-selected="false">BRANDING</button>
+          <button class="filter-btn" role="tab" data-filter="social" aria-selected="false">SOCIAL</button>
+          <button class="filter-btn" role="tab" data-filter="web" aria-selected="false">WEB</button>
+          <button class="filter-btn" role="tab" data-filter="video" aria-selected="false">VIDEO</button>
+          <button class="filter-btn" role="tab" data-filter="design" aria-selected="false">DESIGN</button>
+        </div>
+
+        <div class="work-grid" id="workGrid" role="list">
+
+          <article class="work-card" data-category="branding" role="listitem" data-cursor="VIEW">
+            <div class="work-card-img">
+              <div class="work-img-placeholder work-img-placeholder--1" role="img" aria-label="Brand identity project placeholder">
+                <span class="work-img-label">BRAND IDENTITY</span>
+              </div>
+            </div>
+            <div class="work-card-info">
+              <div class="work-card-meta">
+                <span class="work-cat-tag">Branding</span>
+                <span class="work-year">2025</span>
+              </div>
+              <h3 class="work-card-title">Corporate Brand Identity</h3>
+              <p class="work-card-desc">Complete brand system — logo, visual identity, brand guidelines and creative direction for a B2B technology company.</p>
+              <div class="work-card-cta">View Project →</div>
+            </div>
+          </article>
+
+          <article class="work-card" data-category="social" role="listitem" data-cursor="VIEW">
+            <div class="work-card-img">
+              <div class="work-img-placeholder work-img-placeholder--2" role="img" aria-label="Social media campaign project placeholder">
+                <span class="work-img-label">SOCIAL CAMPAIGN</span>
+              </div>
+            </div>
+            <div class="work-card-info">
+              <div class="work-card-meta">
+                <span class="work-cat-tag">Social Media</span>
+                <span class="work-year">2025</span>
+              </div>
+              <h3 class="work-card-title">Social Media Growth Campaign</h3>
+              <p class="work-card-desc">Multi-platform social strategy and content creation that significantly grew brand reach and community engagement.</p>
+              <div class="work-card-cta">View Project →</div>
+            </div>
+          </article>
+
+          <article class="work-card work-card--wide" data-category="web" role="listitem" data-cursor="VIEW">
+            <div class="work-card-img">
+              <div class="work-img-placeholder work-img-placeholder--3" role="img" aria-label="Web development project placeholder">
+                <span class="work-img-label">WEB DEVELOPMENT</span>
+              </div>
+            </div>
+            <div class="work-card-info">
+              <div class="work-card-meta">
+                <span class="work-cat-tag">Web</span>
+                <span class="work-year">2025</span>
+              </div>
+              <h3 class="work-card-title">E-commerce Platform</h3>
+              <p class="work-card-desc">Full-stack e-commerce solution with modern UI/UX, optimized conversion funnel and integrated analytics dashboard.</p>
+              <div class="work-card-cta">View Project →</div>
+            </div>
+          </article>
+
+          <article class="work-card" data-category="video" role="listitem" data-cursor="VIEW">
+            <div class="work-card-img">
+              <div class="work-img-placeholder work-img-placeholder--4" role="img" aria-label="Video production project placeholder">
+                <span class="work-img-label">VIDEO PRODUCTION</span>
+              </div>
+            </div>
+            <div class="work-card-info">
+              <div class="work-card-meta">
+                <span class="work-cat-tag">Video</span>
+                <span class="work-year">2025</span>
+              </div>
+              <h3 class="work-card-title">Corporate Brand Film</h3>
+              <p class="work-card-desc">Cinematic corporate documentary showcasing company culture, values and vision — crafted for digital and broadcast distribution.</p>
+              <div class="work-card-cta">View Project →</div>
+            </div>
+          </article>
+
+          <article class="work-card" data-category="design" role="listitem" data-cursor="VIEW">
+            <div class="work-card-img">
+              <div class="work-img-placeholder work-img-placeholder--5" role="img" aria-label="Creative design project placeholder">
+                <span class="work-img-label">CREATIVE DESIGN</span>
+              </div>
+            </div>
+            <div class="work-card-info">
+              <div class="work-card-meta">
+                <span class="work-cat-tag">Design</span>
+                <span class="work-year">2025</span>
+              </div>
+              <h3 class="work-card-title">Digital Marketing Creatives</h3>
+              <p class="work-card-desc">Full creative suite — social media graphics, display ads, email templates and digital collateral for a retail brand launch.</p>
+              <div class="work-card-cta">View Project →</div>
+            </div>
+          </article>
+
+          <article class="work-card" data-category="branding social" role="listitem" data-cursor="VIEW">
+            <div class="work-card-img">
+              <div class="work-img-placeholder work-img-placeholder--6" role="img" aria-label="Influencer campaign project placeholder">
+                <span class="work-img-label">INFLUENCER</span>
+              </div>
+            </div>
+            <div class="work-card-info">
+              <div class="work-card-meta">
+                <span class="work-cat-tag">Influencer</span>
+                <span class="work-year">2025</span>
+              </div>
+              <h3 class="work-card-title">Influencer Launch Campaign</h3>
+              <p class="work-card-desc">End-to-end influencer strategy — creator selection, content briefs, campaign management and performance analytics.</p>
+              <div class="work-card-cta">View Project →</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CASE STUDIES
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="case-section" aria-labelledby="caseHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-fade">CASE STUDIES</span>
+          <h2 id="caseHeading" class="section-title reveal-up">RESULTS THAT<br/>SPEAK FOR THEMSELVES.</h2>
+          <p class="section-sub reveal-fade">Real campaigns. Real results. Updated as client data becomes available.</p>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card reveal-fade">
+            <div class="case-header">
+              <div class="case-tag">DIGITAL MARKETING</div>
+              <div class="case-title">Performance Campaign Optimization</div>
+            </div>
+            <div class="case-body">
+              <div class="case-block">
+                <div class="case-block-label">THE CHALLENGE</div>
+                <p class="case-block-text">Low brand visibility and underperforming paid campaigns with poor targeting and creative alignment.</p>
+              </div>
+              <div class="case-block">
+                <div class="case-block-label">THE STRATEGY</div>
+                <p class="case-block-text">Full-funnel restructure — audience segmentation, creative refresh and platform reallocation based on performance data.</p>
+              </div>
+              <div class="case-block">
+                <div class="case-block-label">THE RESULT</div>
+                <div class="case-stats">
+                  <div class="case-stat">
+                    <span class="case-stat-num" data-target="120">0</span><span class="case-stat-unit">%</span>
+                    <span class="case-stat-label">Reach</span>
+                  </div>
+                  <div class="case-stat">
+                    <span class="case-stat-num" data-target="85">0</span><span class="case-stat-unit">%</span>
+                    <span class="case-stat-label">Engagement</span>
+                  </div>
+                  <div class="case-stat">
+                    <span class="case-stat-num" data-target="42">0</span><span class="case-stat-unit">%</span>
+                    <span class="case-stat-label">Conversions</span>
+                  </div>
+                </div>
+                <p class="case-disclaimer">* Indicative results. Actual client data to be updated.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="case-card reveal-fade">
+            <div class="case-header">
+              <div class="case-tag">BRANDING &amp; SOCIAL</div>
+              <div class="case-title">Brand Launch &amp; Social Growth</div>
+            </div>
+            <div class="case-body">
+              <div class="case-block">
+                <div class="case-block-label">THE CHALLENGE</div>
+                <p class="case-block-text">A new-to-market brand with no digital presence, no audience and no defined visual identity.</p>
+              </div>
+              <div class="case-block">
+                <div class="case-block-label">THE STRATEGY</div>
+                <p class="case-block-text">Brand identity creation, social media content calendar, community building strategy and paid amplification.</p>
+              </div>
+              <div class="case-block">
+                <div class="case-block-label">THE RESULT</div>
+                <div class="case-stats">
+                  <div class="case-stat">
+                    <span class="case-stat-num" data-target="5">0</span><span class="case-stat-unit">K+</span>
+                    <span class="case-stat-label">Followers</span>
+                  </div>
+                  <div class="case-stat">
+                    <span class="case-stat-num" data-target="60">0</span><span class="case-stat-unit">%</span>
+                    <span class="case-stat-label">Brand Recall</span>
+                  </div>
+                  <div class="case-stat">
+                    <span class="case-stat-num" data-target="3">0</span><span class="case-stat-unit">x</span>
+                    <span class="case-stat-label">Website Traffic</span>
+                  </div>
+                </div>
+                <p class="case-disclaimer">* Indicative results. Actual client data to be updated.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         TECHNOLOGY SECTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="tech-section" aria-labelledby="techHeading">
+      <div class="tech-bg" aria-hidden="true">
+        <canvas id="techCanvas" aria-hidden="true"></canvas>
+      </div>
+      <div class="container">
+        <div class="tech-inner">
+          <div class="section-header section-header--center">
+            <span class="section-tag reveal-fade">TECH STACK</span>
+            <h2 id="techHeading" class="section-title reveal-up">POWERED BY<br/>TECHNOLOGY.</h2>
+            <p class="section-sub reveal-fade">
+              We leverage the most advanced digital tools, platforms and technologies
+              to deliver results at scale.
+            </p>
+          </div>
+
+          <div class="tech-orbit" id="techOrbit" aria-label="Technology ecosystem" role="list">
+            <div class="tech-center-node" aria-hidden="true">
+              <div class="tech-center-ring"></div>
+              <span>ASR</span>
+            </div>
+            <div class="tech-node" style="--angle:0deg; --radius:220px" role="listitem">AI</div>
+            <div class="tech-node" style="--angle:45deg; --radius:220px" role="listitem">Analytics</div>
+            <div class="tech-node" style="--angle:90deg; --radius:220px" role="listitem">Cloud</div>
+            <div class="tech-node" style="--angle:135deg; --radius:220px" role="listitem">Web</div>
+            <div class="tech-node" style="--angle:180deg; --radius:220px" role="listitem">Automation</div>
+            <div class="tech-node" style="--angle:225deg; --radius:220px" role="listitem">Data</div>
+            <div class="tech-node" style="--angle:270deg; --radius:220px" role="listitem">Social</div>
+            <div class="tech-node" style="--angle:315deg; --radius:220px" role="listitem">Ads</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="testimonials-section" aria-labelledby="testimonialsHeading">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag reveal-fade">TESTIMONIALS</span>
+          <h2 id="testimonialsHeading" class="section-title reveal-up">WHAT OUR CLIENTS<br/>SAY ABOUT US.</h2>
+        </div>
+
+        <div class="testimonials-carousel" id="testimonialsCarousel" aria-roledescription="carousel" aria-label="Client testimonials">
+          <div class="testimonials-track" id="testimonialsTrack">
+
+            <article class="testimonial-card" aria-roledescription="slide">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">
+                [Client testimonial placeholder — to be replaced with actual client feedback upon project completion and client approval.]
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" role="img" aria-label="Client photo placeholder">
+                  <div class="avatar-placeholder">C</div>
+                </div>
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Client Name</div>
+                  <div class="testimonial-role">CEO, Company Name</div>
+                  <div class="testimonial-project">Project: Brand Identity + Social Media</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card" aria-roledescription="slide">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">
+                [Client testimonial placeholder — to be replaced with actual client feedback upon project completion and client approval.]
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" role="img" aria-label="Client photo placeholder">
+                  <div class="avatar-placeholder">B</div>
+                </div>
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Client Name</div>
+                  <div class="testimonial-role">Founder, Brand Name</div>
+                  <div class="testimonial-project">Project: Digital Marketing Campaign</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="testimonial-card" aria-roledescription="slide">
+              <div class="testimonial-quote" aria-hidden="true">"</div>
+              <p class="testimonial-text">
+                [Client testimonial placeholder — to be replaced with actual client feedback upon project completion and client approval.]
+              </p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar" role="img" aria-label="Client photo placeholder">
+                  <div class="avatar-placeholder">D</div>
+                </div>
+                <div class="testimonial-info">
+                  <div class="testimonial-name">Client Name</div>
+                  <div class="testimonial-role">Marketing Head, Company</div>
+                  <div class="testimonial-project">Project: Web Development + SEO</div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <div class="testimonial-controls" role="group" aria-label="Testimonial navigation">
+            <button class="testimonial-btn" id="testPrev" aria-label="Previous testimonial">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M12 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="testimonial-dots" role="tablist" aria-label="Testimonial pages">
+              <button class="t-dot t-dot--active" role="tab" aria-selected="true" aria-label="Testimonial 1"></button>
+              <button class="t-dot" role="tab" aria-selected="false" aria-label="Testimonial 2"></button>
+              <button class="t-dot" role="tab" aria-selected="false" aria-label="Testimonial 3"></button>
+            </div>
+            <button class="testimonial-btn" id="testNext" aria-label="Next testimonial">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M8 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CLIENTS / PARTNERS LOGO WALL
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="clients-section" aria-labelledby="clientsHeading">
+      <div class="container">
+        <h2 id="clientsHeading" class="clients-heading reveal-fade">
+          TRUSTED BY BRANDS, CREATORS &amp; BUSINESSES
+        </h2>
+        <p class="clients-sub reveal-fade">
+          Client logos to be added upon confirmation and approval. We partner with brands across industries.
+        </p>
+        <div class="clients-grid" aria-label="Client and partner logos">
+          <div class="client-logo-slot" aria-label="Client logo placeholder">CLIENT</div>
+          <div class="client-logo-slot" aria-label="Client logo placeholder">PARTNER</div>
+          <div class="client-logo-slot" aria-label="Client logo placeholder">BRAND</div>
+          <div class="client-logo-slot" aria-label="Client logo placeholder">AGENCY</div>
+          <div class="client-logo-slot" aria-label="Client logo placeholder">STARTUP</div>
+          <div class="client-logo-slot" aria-label="Client logo placeholder">CREATOR</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CTA SECTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section class="cta-section" aria-labelledby="ctaHeading">
+      <canvas id="ctaCanvas" aria-hidden="true"></canvas>
+      <div class="cta-particles" aria-hidden="true" id="ctaParticles"></div>
+      <div class="cta-inner">
+        <div class="cta-glow-ring" aria-hidden="true"></div>
+        <span class="section-tag reveal-fade">LET'S BUILD</span>
+        <h2 id="ctaHeading" class="cta-title reveal-up">
+          READY TO BUILD<br/>SOMETHING DIGITAL?
+        </h2>
+        <p class="cta-sub reveal-fade">
+          Let's turn your idea into a digital experience that people remember.
+        </p>
+        <div class="cta-buttons reveal-fade">
+          <a href="#contact" class="btn btn--primary" data-cursor="OPEN">
+            <span>START A PROJECT</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn--ghost" data-cursor="OPEN">
+            <span>TALK TO US</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════════════════════════ -->
+    <section id="contact" class="contact-section" aria-labelledby="contactHeading">
+      <div class="container">
+        <div class="contact-inner">
+          <div class="contact-info">
+            <span class="section-tag reveal-fade">CONTACT</span>
+            <h2 id="contactHeading" class="section-title reveal-up">LET'S START<br/>SOMETHING<br/>GREAT.</h2>
+            <p class="contact-desc reveal-fade">
+              Tell us about your project. We'll review your brief and get back to you within 24 hours.
+            </p>
+            <div class="contact-details reveal-fade">
+              <div class="contact-detail">
+                <span class="contact-detail-label">EMAIL</span>
+                <a href="mailto:hello@asrdigitalboost.com" class="contact-detail-val">hello@asrdigitalboost.com</a>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-detail-label">SOCIAL</span>
+                <div class="social-links">
+                  <a href="#" class="social-link" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    <span>Instagram</span>
+                  </a>
+                  <a href="#" class="social-link" aria-label="LinkedIn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    <span>LinkedIn</span>
+                  </a>
+                  <a href="#" class="social-link" aria-label="YouTube">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+                    <span>YouTube</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal-fade">
+            <form class="contact-form" id="contactForm" novalidate aria-label="Project request form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contactName">Full Name *</label>
+                  <input class="form-input" type="text" id="contactName" name="name" placeholder="Your name" required autocomplete="name" aria-required="true" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactEmail">Email Address *</label>
+                  <input class="form-input" type="email" id="contactEmail" name="email" placeholder="your@email.com" required autocomplete="email" aria-required="true" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contactPhone">Phone Number</label>
+                  <input class="form-input" type="tel" id="contactPhone" name="phone" placeholder="+91 00000 00000" autocomplete="tel" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactCompany">Company</label>
+                  <input class="form-input" type="text" id="contactCompany" name="company" placeholder="Your company" autocomplete="organization" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contactService">Service *</label>
+                  <select class="form-input form-select" id="contactService" name="service" required aria-required="true">
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="social-media">Social Media Marketing</option>
+                    <option value="seo">SEO</option>
+                    <option value="google-ads">Google Ads</option>
+                    <option value="branding">Branding</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="video-production">Video Production</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="ui-ux">UI/UX Design</option>
+                    <option value="influencer">Influencer Marketing</option>
+                    <option value="ai-automation">AI &amp; Automation</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactBudget">Budget Range</label>
+                  <select class="form-input form-select" id="contactBudget" name="budget">
+                    <option value="" disabled selected>Select budget</option>
+                    <option value="under-25k">Under ₹25,000</option>
+                    <option value="25k-50k">₹25,000 – ₹50,000</option>
+                    <option value="50k-1l">₹50,000 – ₹1,00,000</option>
+                    <option value="1l-3l">₹1,00,000 – ₹3,00,000</option>
+                    <option value="3l-plus">₹3,00,000+</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group form-group--full">
+                <label class="form-label" for="contactMessage">Project Brief *</label>
+                <textarea class="form-input form-textarea" id="contactMessage" name="message" placeholder="Tell us about your project, goals and timeline..." required aria-required="true" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full" data-cursor="OPEN" aria-label="Submit project request">
+                <span>SEND PROJECT REQUEST</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d="M2 8l12-4-4 12-2-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <div class="form-success" id="formSuccess" role="alert" aria-live="polite" hidden>
+                <span>✓</span> Your message has been sent. We'll be in touch within 24 hours.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-asr">ASR</span>
+            <span class="logo-db">DIGITALBOOST</span>
+          </div>
+          <div class="footer-company-full">AND MUSIC PRIVATE LIMITED</div>
+          <p class="footer-tagline">"Where Creativity Meets Digital Growth."</p>
+          <div class="footer-social">
+            <a href="#" class="footer-social-link" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            <a href="#" class="footer-social-link" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" class="footer-social-link" aria-label="YouTube"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.95A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+            <a href="#" class="footer-social-link" aria-label="X (Twitter)"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-group">
+            <h3 class="footer-nav-title">COMPANY</h3>
+            <ul role="list">
+              <li><a href="#about" class="footer-nav-link">About Us</a></li>
+              <li><a href="#about" class="footer-nav-link">Our Team</a></li>
+              <li><a href="#work" class="footer-nav-link">Portfolio</a></li>
+              <li><a href="#contact" class="footer-nav-link">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h3 class="footer-nav-title">SERVICES</h3>
+            <ul role="list">
+              <li><a href="#services" class="footer-nav-link">Digital Marketing</a></li>
+              <li><a href="#services" class="footer-nav-link">Branding</a></li>
+              <li><a href="#services" class="footer-nav-link">Video Production</a></li>
+              <li><a href="#services" class="footer-nav-link">Web Development</a></li>
+              <li><a href="#services" class="footer-nav-link">AI &amp; Automation</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-group">
+            <h3 class="footer-nav-title">WORK</h3>
+            <ul role="list">
+              <li><a href="#work" class="footer-nav-link">Selected Work</a></li>
+              <li><a href="#work" class="footer-nav-link">Case Studies</a></li>
+              <li><a href="#process" class="footer-nav-link">Our Process</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 ASR DIGITALBOOST AND MUSIC PRIVATE LIMITED. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#" class="footer-legal-link">Privacy Policy</a>
+          <a href="#" class="footer-legal-link">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main Script -->
+  <script src="script.js" defer></script>
+</body>
+</html>
