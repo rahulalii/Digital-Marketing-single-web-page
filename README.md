@@ -1,4 +1,4 @@
-A modern, futuristic, and fully responsive digital marketing agency website built for **ASR DIGITALBOOST AND MUSIC PRIVATE LIMITED**.
+A modern, futuristic, and fully responsive digital marketing agency website built for Your Personal Company , Orgainazation .
 
 The website features a premium cinematic interface with interactive animations, modern UI/UX, digital marketing services, portfolio presentation, business information, and futuristic visual effects.
 <img width="1707" height="938" alt="Screenshot 2026-09-26 121403" src="https://github.com/user-attachments/assets/e8cfe493-91fb-4444-b847-e45399194e64" />
